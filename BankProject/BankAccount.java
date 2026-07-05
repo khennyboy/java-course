@@ -19,7 +19,7 @@ public class BankAccount {
             System.out.println("Amount must be greater than zero.");
             return; // stop early — don't allow bad input
         }
-        balance += amount;
+        this.balance += amount;
         transactions.add(new Transaction("DEPOSIT", amount));
         System.out.printf("Deposited ₦%.2f. New balance: ₦%.2f%n", amount, balance);
     }
