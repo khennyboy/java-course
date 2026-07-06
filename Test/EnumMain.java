@@ -1,4 +1,5 @@
-import mypack.MyPackageClass;
+import java.util.ArrayList;
+import java.util.List;
 
 interface RunnableTask {
     void performAction();
@@ -28,12 +29,22 @@ enum AppStatus implements RunnableTask {
 }
 
 class EnumMain {
-    int df = 20;
+
     public static void main(String[] args) {
         EnumMain hy = new EnumMain();
+        List<String> stringList = new ArrayList<>();
+
         AppStatus currentStatus = AppStatus.STOP;
         System.out.println(currentStatus.getMessage());
         currentStatus.performAction();
-        System.out.println(hy.df);
+        stringList.add("Bayo1");
+        stringList.add("Bayo2");
+        stringList.add("Bayo3");
+        stringList.add("Bayo4");
+        stringList.remove(1);
+        stringList.remove(String.valueOf("Bayo3"));
+        for (String i : stringList) {
+            System.out.println(i);
+        }
     }
 }

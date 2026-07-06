@@ -1,4 +1,4 @@
-package studentracker;
+package studentracker2;
 
 public class Course {
     private String courseCode;

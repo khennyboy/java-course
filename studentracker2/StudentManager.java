@@ -1,4 +1,4 @@
-package studentracker;
+package studentracker2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,15 @@ public class StudentManager {
         }
     }
 
-    private Student findStudentById(short studentId) {
+    // NEW: exposes the raw list so the GUI can populate its table.
+    // Doesn't change any existing behavior.
+    public List<Student> getAllStudents() {
+        return students;
+    }
+
+    // CHANGED: was "private", now "public" so the GUI can look up a
+    // Student object directly (instead of only printing to console).
+    public Student findStudentById(short studentId) {
         for (Student s : students) {
             if (s.getId() == studentId) return s;
         }
